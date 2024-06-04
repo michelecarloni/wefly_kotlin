@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="margin_bottomBar">
+        <item name="android:layout_marginBottom" >55dp</item>
+    </style>
+</resources>

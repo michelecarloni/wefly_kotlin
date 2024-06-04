@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/summer_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background = "@color/blue"
+        android:alpha="0.5">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="140dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="28dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="28dp">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_png"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/accedi_email_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrati"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeWidth="1dp"
+                app:cornerRadius="0dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/registrati_icon"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/login_google_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continua con Google"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/white"
+                app:strokeWidth="1dp"
+                app:cornerRadius="0dp"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:drawableLeft="@drawable/google_icon"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hai già un account?"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/accedi_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accedi"
+                    android:textColor="@color/red"
+                    android:layout_marginLeft = "5dp"
+                    android:clickable="true"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

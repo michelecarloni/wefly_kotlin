@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/map_viaggi">
+
+    <fragment
+        android:id="@+id/map_viaggi"
+        android:name="com.example.wefly.MapFragment"
+        android:label="Viaggi"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_map_viaggi_to_navigation_viaggi"
+            app:destination="@id/navigation_viaggi" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_viaggi"
+        android:name="com.example.wefly.ViaggiFragment"
+        android:label="Viaggi"
+        tools:layout="@layout/fragment_viaggi" >
+        <action
+            android:id="@+id/action_navigation_viaggi_to_map_viaggi"
+            app:destination="@id/map_viaggi" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_crea_viaggio"
+        android:name="com.example.wefly.CreaViaggioFragment"
+        android:label="CreaViaggio"
+        tools:layout="@layout/fragment_crea_viaggio" >
+        <action
+            android:id="@+id/action_navigation_crea_viaggio_to_creaViaggio2Fragment"
+            app:destination="@id/creaViaggio2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.wefly.ChatListFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_navigation_chat_to_chatViaggioFragment"
+            app:destination="@id/chatViaggioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profilo"
+        android:name="com.example.wefly.ProfiloFragment"
+        android:label="Profilo"
+        tools:layout="@layout/fragment_profilo" />
+    <fragment
+        android:id="@+id/creaViaggio2Fragment"
+        android:name="com.example.wefly.CreaViaggio2Fragment"
+        android:label="CreaViaggio2Fragment" >
+        <action
+            android:id="@+id/action_creaViaggio2Fragment_to_navigation_crea_viaggio"
+            app:destination="@id/navigation_crea_viaggio" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatViaggioFragment"
+        android:name="com.example.wefly.ChatViaggioFragment"
+        android:label="fragment_chat_viaggio"
+        tools:layout="@layout/fragment_chat_viaggio" />
+</navigation>

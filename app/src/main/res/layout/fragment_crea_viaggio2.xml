@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:id="@+id/crea_viaggio_2"
+    tools:context=".CreaViaggioFragment">
+
+    <include layout = "@layout/toolbar"/>
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Tipo di viaggio"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="80dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta1"
+                    android:layout_alignParentStart="true"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta2"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="80dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta3"
+                    android:layout_alignParentStart="true"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta4"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="80dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta5"
+                    android:layout_alignParentStart="true"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta6"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="80dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta7"
+                    android:layout_alignParentStart="true"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta8"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="80dp">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta9"
+                    android:layout_alignParentStart="true"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta10"
+                    android:layout_alignParentEnd="true"/>
+
+            </RelativeLayout>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Descrizione"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginHorizontal="15dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:hintEnabled="false">
+
+                <EditText
+                    android:id="@+id/textArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Numero massimo di partecipanti"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"/>
+
+
+                <EditText
+                    android:id="@+id/partecipantiMax"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:inputType="number"
+                    android:layout_marginLeft="12dp"/>
+
+            </LinearLayout>
+
+            <!--<com.google.android.material.button.MaterialButton
+                android:id="@+id/partecipanti_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proponi partecipanti"
+                app:icon="@drawable/profile_icon"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                app:elevation = "8dp"
+                app:backgroundTint="@color/light_blue"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop = "18dp"/>-->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/change_image_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambia immagine"
+                android:textSize="18sp"
+                app:cornerRadius="5dp"
+                app:elevation = "8dp"
+                android:layout_marginTop = "15dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_gravity = "center_horizontal"
+                app:backgroundTint="@color/light_blue"/>
+
+            <ImageView
+                android:id = "@+id/picture_travel"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop = "18dp"
+                android:src = "@drawable/no_image_photo_travel"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/indietro_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Indietro"
+                    app:cornerRadius="10dp"
+                    app:elevation = "8dp"
+                    app:backgroundTint="@color/light_blue"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_alignParentStart="true"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/conferma_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="Conferma"
+                    app:cornerRadius="10dp"
+                    app:elevation = "8dp"
+                    app:backgroundTint="@color/light_blue"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:layout_alignParentEnd="true"
+                    style = "@style/margin_bottomBar"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- styles.xml -->
+    <style name="CustomTextInputLayoutOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/purple</item>
+        <item name="hintTextColor">@color/purple</item>
+    </style>
+
+    <style name="CustomOutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/light_blue</item>
+        <item name="android:textColorHint">@color/light_blue</item>
+        <item name="endIconTint">@color/light_blue</item>
+        <item name="indicatorColor">@color/light_blue</item>
+        <item name="hintTextColor">@color/light_blue</item>
+    </style>
+
+
+</resources>
