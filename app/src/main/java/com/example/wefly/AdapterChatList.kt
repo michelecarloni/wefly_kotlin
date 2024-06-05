@@ -5,9 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 
-class AdapterChatList (private val newList : ArrayList<DataChatList>) : RecyclerView.Adapter<AdapterChatList.MyViewHolder>() {
+class AdapterChatList (private val navController: NavController,
+                       private val newList : ArrayList<DataChatList>) : RecyclerView.Adapter<AdapterChatList.MyViewHolder>() {
 
 
 
@@ -19,8 +21,12 @@ class AdapterChatList (private val newList : ArrayList<DataChatList>) : Recycler
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentItem = newList[position]
-        holder.immagineProfilo.setImageResource(currentItem.immagineProfilo)
+        holder.immagineProfilo.setImageResource(currentItem.immagineViaggio)
         holder.titoloViaggio.text = currentItem.titoloViaggio
+        holder.itemView.setOnClickListener {
+            val action=ChatListFragmentDirections.actionNavigationChatToChatViaggioFragment(currentItem.immagineViaggio,currentItem.titoloViaggio)
+            navController.navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

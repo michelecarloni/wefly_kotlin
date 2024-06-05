@@ -5,55 +5,50 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.navigation.fragment.navArgs
+import com.example.wefly.adapter.MessageAdapter
+import com.example.wefly.model.Message
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [ChatViaggioFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ChatViaggioFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    val args: ChatViaggioFragmentArgs by navArgs()
+    private lateinit var databaseReference: DatabaseReference
+    private lateinit var storageReference: StorageReference
+    private lateinit var adapter : MessageAdapter
+    var message: ArrayList<Message>?=null
+    var senderRoom:String?=null
+    var receiverRoom:String?=null
+    var senderUid:String?=null
+    var receiverUid:String?=null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat_viaggio, container, false)
+        val titoloViaggio=args.titoloViaggio
+        val immagineViaggio=args.immagineViaggio
+        val view=inflater.inflate(R.layout.fragment_chat_viaggio, container, false)
+        databaseReference =
+            FirebaseDatabase.getInstance("https://wefly-d50f7-default-rtdb.europe-west1.firebasedatabase.app")
+                .getReference("Chats")
+        storageReference = FirebaseStorage.getInstance()
+            .getReference("ViaggiTotali")
+        val img=view.findViewById<ImageView>(R.id.travelImage)
+        val txt=view.findViewById<TextView>(R.id.travelTitle)
+        img.setImageResource(immagineViaggio)
+        txt.text=titoloViaggio
+
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ChatViaggioFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ChatViaggioFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }

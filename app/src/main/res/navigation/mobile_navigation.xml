@@ -59,5 +59,12 @@
         android:id="@+id/chatViaggioFragment"
         android:name="com.example.wefly.ChatViaggioFragment"
         android:label="fragment_chat_viaggio"
-        tools:layout="@layout/fragment_chat_viaggio" />
+        tools:layout="@layout/fragment_chat_viaggio" >
+        <argument
+            android:name="immagineViaggio"
+            app:argType="integer" />
+        <argument
+            android:name="titoloViaggio"
+            app:argType="string" />
+    </fragment>
 </navigation>

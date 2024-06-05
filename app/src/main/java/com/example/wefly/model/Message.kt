@@ -1,10 +1,11 @@
-package com.example.wefly
+package com.example.wefly.model
 
 class Message {
     var messageId:String?=null
     var message:String?=null
     var senderId:String?=null
     var timestamp:Long=0
+    constructor(){}
     constructor(
         message:String?,
         senderId:String?,

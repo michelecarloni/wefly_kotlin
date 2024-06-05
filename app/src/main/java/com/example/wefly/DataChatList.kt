@@ -1,3 +1,3 @@
 package com.example.wefly
 
-data class DataChatList(var immagineProfilo : Int, var titoloViaggio : String)
+data class DataChatList(var immagineViaggio : Int, var titoloViaggio : String)

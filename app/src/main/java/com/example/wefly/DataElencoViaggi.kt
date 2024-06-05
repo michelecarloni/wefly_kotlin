@@ -10,8 +10,9 @@ import android.os.Parcelable
 // delete titoloImmagine, tipoViaggio, Affinita
 // add partecipanti max
 
-data class DataElencoViaggi(var titoloViaggio: String, var budget: String, var nazione : String, var citta : String, var dataPartenza : String, var dataRitorno: String, var partecipanti : Int, var partecipantiMax : Int, var descrizione : String, var scelta1: Boolean, var scelta2: Boolean, var scelta3: Boolean, var scelta4: Boolean, var scelta5: Boolean, var scelta6: Boolean, var scelta7: Boolean, var scelta8: Boolean, var scelta9: Boolean, var scelta10: Boolean): Parcelable {
+data class DataElencoViaggi(/*var titoloImmagine : Int, */var titoloViaggio: String, var budget: String, var nazione : String, var citta : String, var dataPartenza : String, var dataRitorno: String, var partecipanti : Int, var partecipantiMax : Int, var descrizione : String, var scelta1: Boolean, var scelta2: Boolean, var scelta3: Boolean, var scelta4: Boolean, var scelta5: Boolean, var scelta6: Boolean, var scelta7: Boolean, var scelta8: Boolean, var scelta9: Boolean, var scelta10: Boolean): Parcelable {
     constructor(parcel: Parcel) : this(
+        //parcel.readInt(),
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
@@ -35,6 +36,7 @@ data class DataElencoViaggi(var titoloViaggio: String, var budget: String, var n
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        //parcel.writeInt(titoloImmagine)
         parcel.writeString(titoloViaggio)
         parcel.writeString(budget)
         parcel.writeString(nazione)

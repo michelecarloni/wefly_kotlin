@@ -2,11 +2,13 @@ package com.example.wefly
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.datepicker.MaterialDatePicker
 import org.osmdroid.config.Configuration
@@ -37,20 +39,19 @@ class MapFragment : Fragment() {
         map.setTileSource(TileSourceFactory.MAPNIK)
         map.setMultiTouchControls(true)
 
+
         val title = rootView.findViewById<TextView>(R.id.toolbar_title)
         title.text = "Mappa"
 
         // Imposta il punto iniziale e il livello di zoom
         val startPoint = GeoPoint(48.8583, 2.2944) // Coordinate di esempio (Torre Eiffel)
         val mapController = map.controller
-        mapController.setZoom(5.0)
+        mapController.setZoom(5.5)
+        map.minZoomLevel = 4.5
+        map.maxZoomLevel = 8.0
         mapController.setCenter(startPoint)
 
-        // Aggiungi un marker
-        val marker = Marker(map)
-        marker.position = startPoint
-        marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
-        map.overlays.add(marker)
+        addMarkerToMap(startPoint)
 
 
 
@@ -123,6 +124,18 @@ class MapFragment : Fragment() {
             }
         }
     }
+    private fun addMarkerToMap(geoPoint: GeoPoint) {
+        val marker = Marker(map)
+        marker.position = geoPoint
+        marker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM)
+        marker.icon = ContextCompat.getDrawable(requireContext(), R.drawable.pin)
+        marker.title="Parigi"
+        map.overlays.add(marker)
+        map.invalidate()
+
+    }
+
+
 
     override fun onResume() {
         super.onResume()

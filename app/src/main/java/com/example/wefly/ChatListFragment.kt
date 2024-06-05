@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -17,17 +19,12 @@ class ChatListFragment : Fragment() {
     private lateinit var adapter : AdapterChatList // dichiarazione dell'adapter
     private lateinit var recyclerView : RecyclerView // dichiarazione della recyclerView
     private lateinit var chatArrayList : ArrayList<DataChatList> // ArrayList di objects
+    private lateinit var navController: NavController
 
     lateinit var imageId : Array<Int>
     lateinit var titoloViaggio : Array<String>
     lateinit var chat : Array<String>
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,13 +41,13 @@ class ChatListFragment : Fragment() {
 
         val title = view.findViewById<TextView>(R.id.toolbar_title)
         title.text = "Chat"
-
+        navController=findNavController()
         dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recyclerViewChat)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = AdapterChatList(chatArrayList)
+        adapter = AdapterChatList(navController,chatArrayList)
         recyclerView.adapter = adapter
     }
 

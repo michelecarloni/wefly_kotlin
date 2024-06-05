@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -69,6 +70,15 @@ dependencies {
     implementation("org.osmdroid:osmdroid-mapsforge:6.1.18")
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    //glide
+    implementation("com.github.bumptech.glide:glide:4.11.0")
+
+    annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
+    implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
 
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
