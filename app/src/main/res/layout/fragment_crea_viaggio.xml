@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
     android:id="@+id/crea_viaggio"
-    tools:context=".CreaViaggioFragment">
+    tools:context=".fragment.CreaViaggioFragment">
 
     <include layout = "@layout/toolbar"/>
 

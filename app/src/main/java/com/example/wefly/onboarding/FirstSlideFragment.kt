@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.wefly.R
-import com.example.wefly.RegisterActivity
+import com.example.wefly.activity.RegisterActivity
 
 class FirstSlideFragment : Fragment() {
 

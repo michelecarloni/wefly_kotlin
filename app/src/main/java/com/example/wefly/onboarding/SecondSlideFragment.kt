@@ -10,7 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.example.wefly.R
-import com.example.wefly.RegisterActivity
+import com.example.wefly.activity.RegisterActivity
 
 class SecondSlideFragment : Fragment() {
 

@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Handler
 import android.os.Looper
 import com.example.wefly.R
-import com.example.wefly.RegisterActivity
+import com.example.wefly.activity.RegisterActivity
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

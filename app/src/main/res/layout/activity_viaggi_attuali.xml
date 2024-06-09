@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ViaggiAttualiActivity">
+    android:background="@drawable/main_background"
+    tools:context=".activity.ViaggiAttualiActivity">
 
     <include layout="@layout/toolbar"/>
 

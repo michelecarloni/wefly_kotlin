@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/main_background"
-    tools:context=".ViaggiPassatiActivity">
+    tools:context=".activity.ViaggiPassatiActivity">
 
     <include layout="@layout/toolbar"/>
 

@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_viaggi_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
-    tools:context=".ViaggiFragment">
+    tools:context=".fragment.ViaggiFragment">
 
     <include layout="@layout/toolbar"/>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="64dp">
+        android:layout_marginTop="64dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/data_picker_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Data"
-                app:icon="@drawable/icon_data"
-                style="@style/Widget.MaterialComponents.Button.Icon"
-                app:elevation="8dp"
-                app:backgroundTint="@color/light_blue"
-                android:layout_centerVertical="true"
-                android:layout_alignParentStart="true"/>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
@@ -63,19 +55,6 @@
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="32dp"
             android:layout_gravity="center_horizontal"/>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/filters_fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/icon_filters"
-            app:elevation="8dp"
-            app:tint="@color/white"
-            app:backgroundTint="@color/light_blue"
-            android:layout_marginLeft = "330dp"
-            android:layout_marginTop= "-70dp"
-            android:layout_centerInParent="true"/>
-
     </LinearLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
-    tools:context=".ProfiloFragment">
+    tools:context=".fragment.ProfiloFragment">
 
     <include layout="@layout/toolbar"/>
 
@@ -64,9 +64,11 @@
                 </LinearLayout>
 
                 <ImageView
+                    android:id = "@+id/edit_state_btn"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@drawable/edit_icon"
+                    android:clickable="true"
                     android:layout_marginTop="20dp"/>
 
             </LinearLayout>
@@ -137,6 +139,25 @@
                 android:layout_width= "match_parent"
                 android:layout_height="wrap_content"
                 android:text="Viaggi passati"
+                android:textSize="20sp"
+                app:cornerRadius="5dp"
+                app:elevation = "8dp"
+                android:layout_marginHorizontal="30dp"
+                app:backgroundTint="@color/light_blue"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="120dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout_btn"
+                android:layout_width= "wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disconneti"
                 android:textSize="20sp"
                 app:cornerRadius="5dp"
                 app:elevation = "8dp"

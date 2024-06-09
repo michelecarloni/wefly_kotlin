@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "705583664973",
+    "firebase_url": "https://wefly-d50f7-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "wefly-d50f7",
     "storage_bucket": "wefly-d50f7.appspot.com"
   },
@@ -14,15 +15,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "705583664973-jcs3ltrokst5f3jvmm8h0fbrufks5um4.apps.googleusercontent.com",
+          "client_id": "705583664973-oa674sbt50vmqehet50srd8t6d59v4eu.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.wefly",
-            "certificate_hash": "284ce15e6d0d63e2680ce8244cbcf60075e5f8f0"
+            "certificate_hash": "a0fb2c99e106873920ac625189198ab0a1ffe6b7"
           }
         },
         {
-          "client_id": "705583664973-d822chkos2tbpu7dr3bld34on247q796.apps.googleusercontent.com",
+          "client_id": "705583664973-vaigpardn2q13b4t2t9h8olttv2f9hnb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

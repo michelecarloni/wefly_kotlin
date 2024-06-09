@@ -11,7 +11,7 @@ import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.ContextCompat.getSystemService
+import com.example.wefly.activity.MainActivity
 
 class NotificationHelper(private val context: Context) {
     companion object {

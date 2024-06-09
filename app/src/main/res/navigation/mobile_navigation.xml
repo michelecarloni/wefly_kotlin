@@ -7,9 +7,10 @@
 
     <fragment
         android:id="@+id/map_viaggi"
-        android:name="com.example.wefly.MapFragment"
+        android:name="com.example.wefly.fragment.MapFragment"
         android:label="Viaggi"
-        tools:layout="@layout/fragment_map" >
+        tools:layout="@layout/fragment_map"
+        app:popUpToInclusive="true">
         <action
             android:id="@+id/action_map_viaggi_to_navigation_viaggi"
             app:destination="@id/navigation_viaggi" />
@@ -17,7 +18,7 @@
 
     <fragment
         android:id="@+id/navigation_viaggi"
-        android:name="com.example.wefly.ViaggiFragment"
+        android:name="com.example.wefly.fragment.ViaggiFragment"
         android:label="Viaggi"
         tools:layout="@layout/fragment_viaggi" >
         <action
@@ -26,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_crea_viaggio"
-        android:name="com.example.wefly.CreaViaggioFragment"
+        android:name="com.example.wefly.fragment.CreaViaggioFragment"
         android:label="CreaViaggio"
         tools:layout="@layout/fragment_crea_viaggio" >
         <action
@@ -35,21 +36,23 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_chat"
-        android:name="com.example.wefly.ChatListFragment"
+        android:name="com.example.wefly.fragment.ChatListFragment"
         android:label="Chat"
-        tools:layout="@layout/fragment_chat" >
+        tools:layout="@layout/fragment_chat_list"
+        app:popUpToInclusive="true">
         <action
-            android:id="@+id/action_navigation_chat_to_chatViaggioFragment"
+            android:id="@+id/action_navigation_chat_to_chatViewFragment"
             app:destination="@id/chatViaggioFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_profilo"
-        android:name="com.example.wefly.ProfiloFragment"
+        android:name="com.example.wefly.fragment.ProfiloFragment"
         android:label="Profilo"
-        tools:layout="@layout/fragment_profilo" />
+        tools:layout="@layout/fragment_profilo"
+        app:popUpToInclusive="true"/>
     <fragment
         android:id="@+id/creaViaggio2Fragment"
-        android:name="com.example.wefly.CreaViaggio2Fragment"
+        android:name="com.example.wefly.fragment.CreaViaggio2Fragment"
         android:label="CreaViaggio2Fragment" >
         <action
             android:id="@+id/action_creaViaggio2Fragment_to_navigation_crea_viaggio"
@@ -57,14 +60,18 @@
     </fragment>
     <fragment
         android:id="@+id/chatViaggioFragment"
-        android:name="com.example.wefly.ChatViaggioFragment"
+        android:name="com.example.wefly.fragment.ChatViaggioFragment"
         android:label="fragment_chat_viaggio"
-        tools:layout="@layout/fragment_chat_viaggio" >
+        tools:layout="@layout/fragment_chat_viaggio"
+        app:popUpToInclusive="true">
         <argument
-            android:name="immagineViaggio"
-            app:argType="integer" />
+            android:name="url"
+            app:argType="string" />
         <argument
-            android:name="titoloViaggio"
+            android:name="nome"
+            app:argType="string" />
+        <argument
+            android:name="cognome"
             app:argType="string" />
     </fragment>
 </navigation>

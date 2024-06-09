@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatViaggioFragment">
+    tools:context=".fragment.ChatViaggioFragment">
 
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -29,21 +29,31 @@
             android:layout_height="60dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/travelImage"
+            android:id="@+id/profileImage"
             android:layout_gravity="center_vertical"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
             android:src="@drawable/no_image_photo_travel"/>
 
-
-
         <TextView
-            android:id="@+id/travelTitle"
+            android:id="@+id/nome_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Titolo"
+            android:text="Nome"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/cognome_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Cognome"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold"

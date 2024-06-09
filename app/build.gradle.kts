@@ -1,8 +1,8 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    id("com.google.gms.google-services")
     id("androidx.navigation.safeargs.kotlin")
+    alias(libs.plugins.googleGmsGoogleServices)
 }
 
 android {
@@ -59,7 +59,9 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     implementation("com.google.firebase:firebase-storage")
     implementation("com.google.firebase:firebase-appcheck-debug")
-    implementation ("com.google.android.gms:play-services-auth:21.0.0")
+    implementation ("com.google.android.gms:play-services-auth:21.2.0")
+    implementation ("com.google.firebase:firebase-firestore-ktx:25.0.0")
+
 
     implementation ("org.apache.commons:commons-csv:1.9.0")
 
@@ -79,6 +81,18 @@ dependencies {
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.1")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
+
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+    implementation ("org.json:json:20210307")
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    // progress bar
+    implementation("com.jpardogo.googleprogressbar:library:1.2.0")
 
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.recyclerview:recyclerview:1.3.2")

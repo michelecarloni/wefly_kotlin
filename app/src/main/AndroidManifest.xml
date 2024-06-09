@@ -23,32 +23,32 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".CompletaProfiloActivity"
+            android:name=".activity.CompletaProfiloActivity"
             android:exported="false" />
         <activity
-            android:name=".DettagliViaggiPassatiActivity"
+            android:name=".activity.DettagliViaggiPassatiActivity"
             android:exported="false" />
         <activity
-            android:name=".DettagliViaggiAttualiActivity"
+            android:name=".activity.DettagliViaggiAttualiActivity"
             android:exported="false" />
         <activity
-            android:name=".ViaggiPassatiActivity"
+            android:name=".activity.ViaggiPassatiActivity"
             android:exported="false" />
         <activity
-            android:name=".ViaggiAttualiActivity"
+            android:name=".activity.ViaggiAttualiActivity"
             android:exported="false" />
         <activity
-            android:name=".DettagliActivity"
+            android:name=".activity.DettagliActivity"
             android:exported="false"
             android:theme="@style/Theme.WeFly" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".activity.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".activity.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true" />
 
         <activity
@@ -56,7 +56,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:exported="true"/>
 
         <activity

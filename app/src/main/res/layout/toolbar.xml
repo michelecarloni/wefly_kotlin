@@ -32,16 +32,6 @@
             android:textStyle="bold"
             android:layout_centerInParent="true" />
 
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="8dp"
-            android:src="@drawable/notifiche_icon"
-            app:tint="@color/white"
-            android:clickable="true"/>
-
     </RelativeLayout>
 
 </RelativeLayout>

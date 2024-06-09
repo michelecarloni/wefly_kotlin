@@ -23,23 +23,35 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="20dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/background_travel"
+            android:src="@drawable/placeholder"
             android:padding="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <TextView
-            android:id="@+id/titolo"
+            android:id="@+id/nomeTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Titolo"
+            android:text="Nome"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginStart="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/title_image"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/cognomeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cognome"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nomeTxt"
             app:layout_constraintTop_toTopOf="parent" />
 
 

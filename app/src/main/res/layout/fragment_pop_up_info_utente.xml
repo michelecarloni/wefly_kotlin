@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/popUpInfoUtenteFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.PopUpInfoUtenteFragment"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id = "@+id/profile_picture"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile_picture"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/change_image_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cambia immagine"
+                android:textSize="18sp"
+                app:cornerRadius="5dp"
+                app:elevation = "8dp"
+                android:layout_marginTop = "15dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_gravity = "center_horizontal"
+                app:backgroundTint="@color/light_blue"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop = "15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nome: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom = "5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <EditText
+                    android:id="@+id/nome_edit_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize = "18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop = "15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cognome: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom = "5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <EditText
+                    android:id="@+id/cognome_edit_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize = "18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop = "15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefono: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom = "5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <EditText
+                    android:id="@+id/telefono_edit_text"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize = "18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop = "15dp"
+                android:layout_gravity = "center_horizontal">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta2"
+                    android:layout_marginLeft = "15dp"
+                    app:layout_constraintStart_toEndOf="@id/scelta1"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scelta1"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta4"
+                    android:layout_marginLeft = "15dp"
+                    app:layout_constraintStart_toEndOf="@id/scelta3"
+                    app:layout_constraintTop_toBottomOf="@id/scelta2"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scelta3"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta6"
+                    android:layout_marginLeft = "15dp"
+                    app:layout_constraintStart_toEndOf="@id/scelta5"
+                    app:layout_constraintTop_toBottomOf="@id/scelta4"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scelta5"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta8"
+                    android:layout_marginLeft = "15dp"
+                    app:layout_constraintStart_toEndOf="@id/scelta7"
+                    app:layout_constraintTop_toBottomOf="@id/scelta6"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta9"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scelta7"/>
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/scelta10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/light_blue"
+                    android:text = "@string/scelta10"
+                    android:layout_marginLeft = "15dp"
+                    app:layout_constraintStart_toEndOf="@id/scelta9"
+                    app:layout_constraintTop_toBottomOf="@id/scelta8"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/salva_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salva"
+                android:textSize="14sp"
+                app:cornerRadius="5dp"
+                app:elevation = "8dp"
+                android:layout_gravity = "center_horizontal"
+                app:backgroundTint="@color/light_blue"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

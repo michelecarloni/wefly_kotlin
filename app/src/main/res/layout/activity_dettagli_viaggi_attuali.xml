@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DettagliActivity">
+    tools:context=".activity.DettagliActivity">
 
     <TextView
         android:id="@+id/titolo"
@@ -39,14 +39,15 @@
                 android:id="@+id/title_image"
                 android:layout_width = "match_parent"
                 android:layout_height = "200dp"
-                android:src="@drawable/background_travel"
+                android:src="@drawable/placeholder"
                 android:scaleType="centerCrop"/>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:id="@+id/citta_label"
@@ -70,6 +71,16 @@
                     app:layout_constraintStart_toEndOf="@id/citta_label"
                     app:layout_constraintTop_toTopOf="parent"/>
 
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="16dp">
+
                 <TextView
                     android:id="@+id/nazione_label"
                     android:layout_width="wrap_content"
@@ -92,7 +103,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"/>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
