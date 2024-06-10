@@ -31,122 +31,98 @@
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="80dp">
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop = "15dp"
+                android:layout_gravity = "center_horizontal">
 
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta1"
+                <LinearLayout
+                    android:id = "@+id/linearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta1"
-                    android:layout_alignParentStart="true"/>
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
 
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta2"
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta1"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta3"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta5"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta7"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta9"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id = "@+id/linearLayout3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta2"
-                    android:layout_alignParentEnd="true"/>
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/linearLayout2"
+                    android:layout_marginLeft =  "25dp">
 
-            </RelativeLayout>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta2"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta4"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta6"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta8"/>
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/scelta10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:buttonTint="@color/light_blue"
+                        android:text = "@string/scelta10"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="80dp">
+                </LinearLayout>
 
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta3"
-                    android:layout_alignParentStart="true"/>
-
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta4"
-                    android:layout_alignParentEnd="true"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="80dp">
-
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta5"
-                    android:layout_alignParentStart="true"/>
-
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta6"
-                    android:layout_alignParentEnd="true"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="80dp">
-
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta7"
-                    android:layout_alignParentStart="true"/>
-
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta8"
-                    android:layout_alignParentEnd="true"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="80dp">
-
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta9"
-                    android:layout_alignParentStart="true"/>
-
-                <com.google.android.material.checkbox.MaterialCheckBox
-                    android:id="@+id/scelta10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:buttonTint="@color/light_blue"
-                    android:text = "@string/scelta10"
-                    android:layout_alignParentEnd="true"/>
-
-            </RelativeLayout>
-
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             <TextView

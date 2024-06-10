@@ -9,16 +9,16 @@
     <string name="prova2">TESTO 2</string>
     <string name="prova3">TESTO 3</string>
 
-    <string name="scelta1">scelta 1</string>
-    <string name="scelta2">scelta 2</string>
-    <string name="scelta3">scelta 3</string>
-    <string name="scelta4">scelta 4</string>
-    <string name="scelta5">scelta 5</string>
-    <string name="scelta6">scelta 6</string>
-    <string name="scelta7">scelta 7</string>
-    <string name="scelta8">scelta 8</string>
-    <string name="scelta9">scelta 9</string>
-    <string name="scelta10">scelta 10</string>
+    <string name="scelta1">relax</string>
+    <string name="scelta2">avventura</string>
+    <string name="scelta3">sport</string>
+    <string name="scelta4">cultura</string>
+    <string name="scelta5">natura</string>
+    <string name="scelta6">festa</string>
+    <string name="scelta7">lusso</string>
+    <string name="scelta8">musica</string>
+    <string name="scelta9">spiaggia</string>
+    <string name="scelta10">arte</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <!-- Strings used for fragments for navigation -->
