@@ -37,11 +37,11 @@ android {
     }
     buildFeatures {
         viewBinding =  true
+        dataBinding = true
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -55,7 +55,7 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
-    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-database")
     implementation("com.google.firebase:firebase-storage")
     implementation("com.google.firebase:firebase-appcheck-debug")
@@ -73,35 +73,50 @@ dependencies {
 
     implementation ("de.hdodenhof:circleimageview:3.1.0")
 
-    //glide
+    // Glide
     implementation("com.github.bumptech.glide:glide:4.11.0")
-
+    implementation(libs.androidx.fragment.testing)
+    implementation(libs.androidx.rules)
     annotationProcessor("com.github.bumptech.glide:compiler:4.11.0")
 
+    // Test dependencies
+    implementation("androidx.test.ext:junit-ktx:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    // Lifecycle
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
     implementation ("androidx.lifecycle:lifecycle-runtime-ktx:2.8.1")
-    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.1")
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
 
-    implementation("com.squareup.okhttp3:okhttp:4.10.0")
-    implementation ("org.json:json:20210307")
-
+    // Kotlin Coroutines
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 
-    // progress bar
+    // OkHttp
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
+
+    // JSON
+    implementation ("org.json:json:20210307")
+
+    // Progress bar
     implementation("com.jpardogo.googleprogressbar:library:1.2.0")
 
+    // Material Components
     implementation("com.google.android.material:material:1.12.0")
+
+    // RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
+
+    // zegocloud
+    implementation("com.github.ZEGOCLOUD:zego-uikit-prebuilt-android:3.2.2")
+
+    // Firebase
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.firestore)
-    implementation(libs.firebase.auth)
+
+    // JUnit
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
 }

@@ -54,7 +54,7 @@ class MapFragment : Fragment() {
     private lateinit var firebaseObject: DataFirebase
 
     // ProgressBar
-    private lateinit var progressBar : ProgressBar
+    lateinit var progressBar : ProgressBar
 
     private lateinit var CittaViewModel : CittaViewModel
 
@@ -114,10 +114,11 @@ class MapFragment : Fragment() {
             readTravel()
             createGeoPoints()
             progressBar.hideProgressBar()
+
         }
     }
 
-    private suspend fun readCSVFile() {
+    suspend fun readCSVFile() {
         withContext(Dispatchers.IO) {
             val inputStream = requireContext().assets.open("cities.csv")
             val bufferReader = BufferedReader(InputStreamReader(inputStream))
@@ -132,7 +133,7 @@ class MapFragment : Fragment() {
         }
     }
 
-    private suspend fun readTravel() {
+    suspend fun readTravel() {
 
         //scorro tutti i viaggi. Per ogni viaggio leggo la nazione. Se la nazione corrisponde ad una chiave di mapNazioni,
         // allora faccio un altro check: la data di Partenza deve essere maggiore della data attuale -> i partecipanti devono essere < dei partecipanti max
@@ -190,7 +191,7 @@ class MapFragment : Fragment() {
         }
     }
 
-    private suspend fun readViaggiStr(): String {
+    suspend fun readViaggiStr(): String {
         return withContext(Dispatchers.IO) {
             val sharedPreferences = requireContext().getSharedPreferences("UserProfile", Context.MODE_PRIVATE)
             val uid = sharedPreferences.getString("uid", "")
@@ -242,7 +243,7 @@ class MapFragment : Fragment() {
         return bitmap
     }
 
-    private fun createGeoPoints() {
+    fun createGeoPoints() {
         val mapController = map.controller
         for (nazione in mapNazioni.keys) {
             val valueListStr = mapNazioni[nazione]!!.split(" ")
