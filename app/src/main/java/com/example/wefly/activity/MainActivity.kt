@@ -1,6 +1,7 @@
 package com.example.wefly.activity
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.util.Log
@@ -11,13 +12,24 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.wefly.utils.KeyConstant
 import com.example.wefly.R
 import com.example.wefly.databinding.ActivityMainBinding
+import com.example.wefly.utils.ProgressBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.zegocloud.zimkit.services.ZIMKit
+import im.zego.zim.entity.ZIMError
+import im.zego.zim.enums.ZIMErrorCode
 
 class MainActivity : AppCompatActivity() {
+
+    // ProgressBar
+    private lateinit var progressBar: ProgressBar
+
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+
+    private lateinit var sharedPreferences: SharedPreferences
 
     private val REQUEST_PERMISSIONS_CODE = 1001
     private val REQUIRED_PERMISSIONS = arrayOf(
@@ -32,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         if (!hasPermissions(this, REQUIRED_PERMISSIONS)) {
             requestPermissions()
         }
+
+        progressBar = ProgressBar(this)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -63,7 +77,16 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_chat -> {
-                    navController.navigate(R.id.navigation_chat)
+                    progressBar.showProgressBar()
+                    initZegocloud()
+
+                    sharedPreferences = getSharedPreferences("UserProfile", Context.MODE_PRIVATE)
+                    val uid = sharedPreferences.getString("uid", "")
+                    val nomeCognome = sharedPreferences.getString("nome", "") + " " + sharedPreferences.getString("cognome", "")
+                    val userAvatar = ""
+                    connectUser(uid, nomeCognome, userAvatar)
+
+                    //navController.navigate(R.id.navigation_chat)
                     true
                 }
 
@@ -102,5 +125,31 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun initZegocloud(){
+        ZIMKit.initWith(this.application, KeyConstant.appId, KeyConstant.appSign)
+        ZIMKit.initNotifications()
+    }
+
+    fun connectUser(userId: String?, userName: String?, userAvatar: String?) {
+        // Logs in.
+        ZIMKit.connectUser(
+            userId, userName, userAvatar
+        ) { errorInfo: ZIMError ->
+            if (errorInfo.code == ZIMErrorCode.SUCCESS) {
+                // Operation after successful login. You will be redirected to other modules only after successful login. In this sample code, you will be redirected to the conversation module.
+                toChatListActivity()
+            } else {
+            }
+        }
+    }
+
+    private fun toChatListActivity() {
+        // Redirect to the conversation list (Activity) you created.
+        //val intent = Intent(this, ConversationActivity::class.java)
+        //startActivity(intent)
+        progressBar.hideProgressBar()
+        navController.navigate(R.id.navigation_chat)
     }
 }

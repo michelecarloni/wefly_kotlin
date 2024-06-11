@@ -38,7 +38,7 @@ class AdapterChatList (private val navController: NavController, private val new
         holder.cognome.text = currentItem.cognome
 
         holder.itemView.setOnClickListener {
-            val action = ChatListFragmentDirections.actionNavigationChatToChatViewFragment(currentItem.url,currentItem.nome,currentItem.cognome)
+            val action = ChatListFragmentDirections.actionNavigationChatToConversationFragment(currentItem.url,currentItem.nome,currentItem.cognome, currentItem.userUid)
             navController.navigate(action)
         }
 

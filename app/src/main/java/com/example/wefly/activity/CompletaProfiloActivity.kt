@@ -6,12 +6,11 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
-import android.view.Window
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.wefly.NotificationHelper
+import com.example.wefly.utils.NotificationHelper
 import com.example.wefly.R
 import com.example.wefly.databinding.ActivityCompletaProfiloBinding
 import com.example.wefly.firebase.DataFirebase
@@ -23,9 +22,7 @@ import com.google.android.material.checkbox.MaterialCheckBox
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
 class CompletaProfiloActivity : AppCompatActivity() {

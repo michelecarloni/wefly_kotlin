@@ -41,8 +41,8 @@
         tools:layout="@layout/fragment_chat_list"
         app:popUpToInclusive="true">
         <action
-            android:id="@+id/action_navigation_chat_to_chatViewFragment"
-            app:destination="@id/chatViaggioFragment" />
+            android:id="@+id/action_navigation_chat_to_conversationFragment"
+            app:destination="@id/conversationFragment" />
     </fragment>
     <fragment
         android:id="@+id/navigation_profilo"
@@ -73,5 +73,28 @@
         <argument
             android:name="cognome"
             app:argType="string" />
+        <argument
+            android:name="userUid"
+            app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.example.wefly.fragment.ConversationFragment"
+        android:label="fragment_conversation"
+        tools:layout="@layout/fragment_conversation" >
+
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="nome"
+            app:argType="string" />
+        <argument
+            android:name="cognome"
+            app:argType="string" />
+        <argument
+            android:name="userUid"
+            app:argType="string" />
+    </fragment>
+
 </navigation>

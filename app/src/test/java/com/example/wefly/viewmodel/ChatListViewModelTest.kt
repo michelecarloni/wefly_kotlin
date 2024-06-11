@@ -2,7 +2,6 @@ package com.example.wefly.viewmodel
 
 import org.junit.Before
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
 
 class ChatListViewModelTest{
 
@@ -15,9 +14,10 @@ class ChatListViewModelTest{
 
     @Test
     fun createNewChatList(){
-        var chatObject = chatListViewModel.createChat("https/Prova", "michele", "carloni")
+        var chatObject = chatListViewModel.createChat("https/Prova", "michele", "carloni", "123456789")
         println("URL: ${chatObject.url}")
         println("Nome: ${chatObject.nome}")
         println("Cognome: ${chatObject.cognome}")
+        println("userUid: ${chatObject.userUid}")
     }
 }

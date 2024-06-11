@@ -1,8 +1,8 @@
 package com.example.wefly.viewmodel
 
+import junit.framework.TestCase.assertEquals
 import org.junit.Before
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
 
 class UtentiViewModelTest{
 

@@ -1,4 +1,4 @@
-package com.example.wefly
+package com.example.wefly.utils
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -11,6 +11,7 @@ import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.example.wefly.R
 import com.example.wefly.activity.MainActivity
 
 class NotificationHelper(private val context: Context) {

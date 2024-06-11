@@ -113,6 +113,7 @@ class ChatListFragment : Fragment() {
             }
 
         })
+        progressBar.hideProgressBar()
 
 
     }
@@ -179,7 +180,7 @@ class ChatListFragment : Fragment() {
                             getPictureTravel(userUid, object : OnImageUrlReceivedListener {
                                 override fun onImageUrlReceived(url: String) {
                                     //val user = ModelChatList(url, nome, cognome)
-                                    val user = ModelChatList(url, nome, cognome)
+                                    val user = ModelChatList(url, nome, cognome, userUid)
                                     chatArrayList.add(user)
                                     Log.d("UserRead", "$userUid")
                                     adapter.notifyDataSetChanged()
@@ -193,7 +194,7 @@ class ChatListFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                progressBar.hideProgressBar()
             }
 
         })

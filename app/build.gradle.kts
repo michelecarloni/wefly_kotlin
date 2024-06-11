@@ -36,7 +36,7 @@ android {
         jvmTarget = "1.8"
     }
     buildFeatures {
-        viewBinding =  true
+        viewBinding = true
         dataBinding = true
     }
 }
@@ -108,12 +108,12 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.recyclerview:recyclerview-selection:1.1.0")
 
-    // zegocloud
-    implementation("com.github.ZEGOCLOUD:zego-uikit-prebuilt-android:3.2.2")
-
     // Firebase
     implementation(libs.firebase.auth.ktx)
     implementation(libs.firebase.firestore)
+
+    // Zegocloud
+    implementation("com.github.ZEGOCLOUD:zego_inapp_chat_uikit_android:+")
 
     // JUnit
     testImplementation(libs.junit)

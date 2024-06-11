@@ -54,7 +54,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text = "Welcome"
+                        android:text = "Benvenuto"
                         android:textColor = "@color/blue"
                         android:textSize = "32sp"
                         android:textStyle = "bold"/>
@@ -62,7 +62,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text = "Please Login with your information"
+                        android:text = "Registrati con le tue informazioni"
                         android:alpha="0.7"/>
 
                 </LinearLayout>
@@ -78,7 +78,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text = "Email Address"
+                android:text = "Indirizzo Email"
                 android:alpha = "0.7"
                 android:textStyle="bold"/>
 
